@@ -26,7 +26,8 @@ removeButtons.forEach(button =>{
     button.addEventListener("click", async ()=>{
         await remove(button.dataset.id)
         // render()
-        
+        // let doc = document.getElementById(myChart)
+        document.location.reload(true)
     })
 })
 

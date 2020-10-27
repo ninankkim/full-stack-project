@@ -79,12 +79,13 @@ const myChart = new Chart(ctx, {
 
 getData(myChart)
 
+
 async function getData(chart){
     const res = await fetch("/main/expenses")
     const data = await res.json()
     console.log(data)
     if(data.length){
-        const table = data[0].category
+         const table = data[0].category
             for (let i = 0; i < data.length; i++) {
                 // if(!data[i].category || !data[i].amount_)
             label = data[i].category
@@ -95,7 +96,17 @@ async function getData(chart){
         }
 
     }
-      
+    
     chart.update();
+    
+
 }
 
+
+// let time;
+// function settime() {
+    
+//     time = setTimeout(getData(myChart), 500);
+//   }
+
+// settime()
